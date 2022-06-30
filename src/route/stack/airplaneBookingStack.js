@@ -6,6 +6,7 @@ import {ImageBackground} from 'react-native';
 import {Images} from '../../utils';
 import {BookingBottomTabNav} from '../bottomTab';
 import {styles} from './style';
+import {MapScreen} from '../../modules/maps';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,10 +22,11 @@ export function AirplaneBookingStack() {
           colors={['#00579D', '#0087F544', '#42AAFF']}>
           <Stack.Navigator
             screenOptions={{
-              headerShown: false,
+              // headerShown: false,
               contentStyle: {backgroundColor: 'transparent'},
             }}>
-            <Stack.Screen name="bottomTab" component={BookingBottomTabNav} />
+            <Stack.Screen name="Airplane" component={BookingBottomTabNav} />
+            <Stack.Screen name="Maps" component={MapScreen} />
           </Stack.Navigator>
         </LinearGradient>
       </ImageBackground>
